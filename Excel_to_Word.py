@@ -23,6 +23,11 @@ def browse_file():
     excel_file_entry.delete(0, tk.END)
     excel_file_entry.insert(0, file_path)
 
+def browse_file_1():
+    file_path = filedialog.askopenfilename(filetypes=[("Excel Files", "*.xls;*.xlsx")])
+    excel_file_entry.delete(0, tk.END)
+    excel_file_entry.insert(0, file_path)
+
 def convert_file():
     try:
         excel_file = excel_file_entry.get()
